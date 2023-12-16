@@ -46,14 +46,14 @@ func (controller *TagsController) Update(ctx *gin.Context) {
 	id, err := strconv.Atoi(tagId)
 	helper.ErrorPanic(err)
 	updateTagsRequest.Id = id
+
 	controller.tagsService.Update(updateTagsRequest)
 
 	webResponse := response.Response{
 		Code:   http.StatusOK,
-		Status: "OK",
+		Status: "Ok",
 		Data:   nil,
 	}
-
 	ctx.Header("Content-Type", "application/json")
 	ctx.JSON(http.StatusOK, webResponse)
 }
