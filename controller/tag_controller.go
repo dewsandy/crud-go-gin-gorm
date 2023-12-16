@@ -66,7 +66,7 @@ func (controller *TagsController) Delete(ctx *gin.Context) {
 
 	webResponse := response.Response{
 		Code:   http.StatusOK,
-		Status: "Deleted",
+		Status: "OK",
 		Data:   nil,
 	}
 
@@ -78,7 +78,7 @@ func (controller *TagsController) FindAll(ctx *gin.Context) {
 	tagResponse := controller.tagsService.FindAll()
 	webResponse := response.Response{
 		Code:   http.StatusOK,
-		Status: "Deleted",
+		Status: "OK",
 		Data:   tagResponse,
 	}
 
@@ -95,7 +95,7 @@ func (controller *TagsController) FindById(ctx *gin.Context) {
 
 	webResponse := response.Response{
 		Code:   http.StatusOK,
-		Status: "Deleted",
+		Status: "OK",
 		Data:   tagResponse,
 	}
 
